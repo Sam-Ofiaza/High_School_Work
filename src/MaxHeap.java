@@ -17,7 +17,7 @@ public class MaxHeap
         int[] test2 = truncateArray(heapify(test));
         System.out.println("\nheapified: " + printArray(test2));
 
-        //findMin
+        //findMax
         System.out.println("\nfindMax = " + findMax(test2));
 
         //insert
