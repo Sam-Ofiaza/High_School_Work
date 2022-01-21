@@ -24,10 +24,10 @@ public class TowersRunner
             System.out.println(print(m));
         }
         else{
-            solve(numRings-1, from, extra, to, m);
-            move(from, to);
+            solve(numRings-1, from, extra, to, m); // Take stack on top of this ring off
+            move(from, to); // Move this ring
             System.out.println(print(m));
-            solve(numRings-1, extra, to, from, m);
+            solve(numRings-1, extra, to, from, m); // Put stack back on
         }
     }
     public static void move(ArrayList<Integer> from, ArrayList<Integer> to){
@@ -88,7 +88,7 @@ solve(5, A, C, B)
                 move(B, C) //2
                 solve(1, A, C, B)
                     move(A, C) //1
-        move(A, C) //4
+        move(A, B) //4
         solve(3, C, B, A)
     move(A, C) //5
     solve(4, B, C, A)
